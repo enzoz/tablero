@@ -61,6 +61,10 @@ var bootstrap = function() {
     url: configServer.redisUrl
   });
 
+  require('./lib/columns')(app, {
+    url: configServer.redisUrl
+  });
+
   port = process.env.PORT || 3000;
   app.listen(port);
   console.log('Server started. Running on port', port);
