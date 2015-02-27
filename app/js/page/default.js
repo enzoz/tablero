@@ -25,7 +25,7 @@
     'component/ui/permissions_gateway',
     'component/mixins/with_auth_token_from_hash',
     'component/ui/columns_modal',
-    'component/data/board_columns'
+    'component/data/columns_manager'
   ],
   function (githubUser,
             githubIssues,
@@ -37,7 +37,7 @@
             permissionsGateway,
             authToken,
             columnsModal,
-            boardColumns) {
+            columnsManager) {
     'use strict';
 
     return initialize;
@@ -56,7 +56,7 @@
       githubUser.attachTo(document);
       issuesExporter.attachTo(document);
       prioritizationManager.attachTo(document);
-      boardColumns.attachTo(document);
+      columnsManager.attachTo(document);
 
       track.attachTo('.issue-track.backlog', {
         trackType: '0 - Backlog'

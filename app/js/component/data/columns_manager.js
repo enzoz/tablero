@@ -17,10 +17,10 @@
   'flight/lib/component',
   'with-request'
   ], function(defineComponent, withRequest) {
-    return defineComponent(boardColumns, withRequest);
+    return defineComponent(columnsManager, withRequest);
 
-    function boardColumns() {
-      this.retrieveColumns = function() {
+    function columnsManager() {
+      this.retrieve = function() {
         $(document).trigger('ui:blockUI');
 
         this.get({
@@ -31,8 +31,17 @@
         });
       };
 
+      this.store = function(event, columns) {
+        this.put({
+          url: 'columns',
+          data: JSON.stringify(columns),
+          contentType: 'application/json'
+        })
+      };
+
       this.after('initialize', function () {
-        this.on('data:retrieve:columns', this.retrieveColumns);
+        this.on('data:retrieve:columns', this.retrieve);
+        this.on('data:store:columns', this.store);
       });
     };
   });
