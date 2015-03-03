@@ -47,15 +47,14 @@
       </div>
     </div>
     <div class="container">
-       <div class="column backlog-sidebar" style="display:none">
-
+      <div class="column backlog-sidebar" style="display:none">
           <div class="panel-heading">
             <div style="height: 8px"></div>
             <span class="hide-icon-sidebar">
-                <span class="small-text">SHOW&nbsp;</span><i class="icon-double-angle-right icon-large"></i>
+              <span class="small-text">SHOW&nbsp;</span><i class="icon-double-angle-right icon-large"></i>
             </span>
           </div>
-           <div class="panel-body ">
+           <div class="panel-body">
              <div class="backlog-vertical-title">
                 <h3>Backlog<span class="issues-count"></span></h3>
              </div>
@@ -77,32 +76,8 @@
         </div>
       </div>
 
+      <div class="board-columns"></div>
 
-
-      <div class="column">
-        <div class="panel panel-default">
-          <div class="panel-heading ready-header"><h3>Ready</h3><span class="issues-count"></div>
-          <div class="cards-place">
-            <div class="panel-body issue-track ready list-group" id="1-ready"> </div>
-          </div>
-        </div>
-      </div>
-      <div class="column">
-        <div class="panel panel-default">
-          <div class="panel-heading development-header"><h3>Development</h3><span class="issues-count"></div>
-          <div class="cards-place">
-            <div class="panel-body issue-track development list-group" id="2-development"> </div>
-          </div>
-        </div>
-      </div>
-      <div class="column">
-        <div class="panel panel-default">
-          <div class="panel-heading quality-assurance-header"><h3>QA</h3><span class="issues-count"></div>
-          <div class="cards-place">
-            <div class="panel-body issue-track quality-assurance list-group" id="3-quality-assurance"> </div>
-          </div>
-        </div>
-      </div>
       <div class="column">
         <div class="panel panel-default">
           <div class="panel-heading done">
@@ -119,7 +94,6 @@
 
 
     <!-- Permissions gateway modal -->
-
     <div class="modal fade" id="permissionsGateway" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -156,15 +130,15 @@
 
     <!-- Modal about error to get issues -->
 
-     <div class="modal fade" id="failConnectionModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style= "display : none">
+    <div class="modal fade" id="failConnectionModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style= "display : none">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
             <h4 class="modal-title" >Oops...</h4>
           </div>
           <div class="modal-body">
-              <p> It seems you have no read permission on private repositories, so we will display only the issues of public repositories.</p>
-              <button type="button" class="btn  btn-xs" id="redirectToPublicBtn"> OK </button>
+            <p> It seems you have no read permission on private repositories, so we will display only the issues of public repositories.</p>
+            <button type="button" class="btn  btn-xs" id="redirectToPublicBtn"> OK </button>
           </div>
         </div>
       </div>
