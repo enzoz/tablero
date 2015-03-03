@@ -54,12 +54,15 @@
       $.blockUI.defaults.ignoreIfBlocked = true;
       $(document).ajaxStop($.unblockUI);
 
-      githubIssues.attachTo(document);
       githubUser.attachTo(document);
       issuesExporter.attachTo(document);
       prioritizationManager.attachTo(document);
       columnsManager.attachTo(document);
-      columnsRender.attachTo(document, { track: track });
+
+      columnsRender.attachTo(document, {
+        track: track,
+        githubIssues: githubIssues
+      });
 
       $('.backlog-column .hide-icon').first().click(function() {
         $('.backlog-column').toggle('slide');

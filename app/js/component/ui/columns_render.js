@@ -23,7 +23,8 @@ define([
     function columnsRender() {
       this.defaultAttrs({
         columnsContainer: '.board-columns',
-        track: null
+        track: null,
+        githubIssues: null
       });
 
       this.askForColumns = function() {
@@ -51,6 +52,10 @@ define([
         });
 
         _.each(columns, this.renderColumn(extraClasses, extraColumns), this);
+
+        this.attr.githubIssues.attachTo(document, {
+          draggableClasses: extraClasses
+        });
 
         var mountBoard = function(){
           $(document).trigger('ui:needs:issues', {});
