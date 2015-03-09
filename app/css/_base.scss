@@ -30,6 +30,10 @@ a {
   }
 }
 
+header {
+  width: 100%;
+}
+
 #projects {
   width: 30%;
   height: 30px;
@@ -121,4 +125,9 @@ a {
   color: white;
 }
 
+.container {
+  overflow-x: scroll !important;
+  width: 100%;
+  white-space: nowrap;
+}
 
