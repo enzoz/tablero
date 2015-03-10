@@ -1,6 +1,5 @@
 .column {
 	margin-right: 12px;
-	margin-bottom: 2px;
   display: inline-block;
   float: none;
   width: 240px;
@@ -132,11 +131,9 @@
 }
 
 .panel-body {
-	height: 78vh;
+	height: 77vh;
 	overflow-x: hidden;
 	min-height: 400px;
-	border-top: 1px solid #E3E3E3;
-	border-bottom: 1px solid #E3E3E3;
 }
 
 .panel-body.done {
